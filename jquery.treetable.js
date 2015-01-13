@@ -178,7 +178,7 @@
       if (!this.initialized) {
         this._initialize();
       }
-      this.row.show();
+//      this.row.show();
       if (this.expanded()) {
         this._showChildren();
       }
@@ -299,9 +299,9 @@
         }
       }
 
-      for (i = 0; i < this.nodes.length; i++) {
-        node = this.nodes[i].updateBranchLeafClass();
-      }
+//      for (i = 0; i < this.nodes.length; i++) {
+//        node = this.nodes[i].updateBranchLeafClass();
+//      }
 
       return this;
     };
