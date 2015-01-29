@@ -126,9 +126,15 @@
       }
     };
 
-    Node.prototype.removeChild = function(child) {
+    Node.prototype.removeChild = function(child, deleted) {
       var i = $.inArray(child, this.children);
-      return this.children.splice(i, 1)
+      var res = this.children.splice(i, 1);
+
+      if (deleted && !this.children.length) {
+        this.row.data(this.settings.branchAttr, false);
+        this.indenter.html('');
+      }
+      return res;
     };
 
     Node.prototype.render = function() {
