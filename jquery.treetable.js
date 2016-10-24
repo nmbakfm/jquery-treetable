@@ -6,6 +6,8 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  */
 (function($) {
+  "use strict";
+
   var Node, Tree, methods;
 
   Node = (function() {
@@ -629,7 +631,7 @@
   };
 
   // Expose classes to world
-  this.TreeTable || (this.TreeTable = {});
-  this.TreeTable.Node = Node;
-  this.TreeTable.Tree = Tree;
+  window.TreeTable || (window.TreeTable = {});
+  window.TreeTable.Node = Node;
+  window.TreeTable.Tree = Tree;
 })(jQuery);
