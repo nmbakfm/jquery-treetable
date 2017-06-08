@@ -186,7 +186,7 @@
       if (!this.initialized) {
         this._initialize();
       }
-//      this.row.show();
+     this.row.show();
       if (this.expanded()) {
         this._showChildren();
       }
